@@ -509,6 +509,21 @@ ul {
   margin: 0 auto 1rem;
 }
 
+.leader-avatar--photo {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background: var(--off-white);
+}
+
+.leader-avatar--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 50%;
+}
+
 .leader-card h3 {
   font-size: 1.15rem;
   color: var(--royal-blue);
