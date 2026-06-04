@@ -247,11 +247,36 @@ ul {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.hero-content {
+.hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-fourway {
+  width: 100%;
+  max-width: 440px;
+  justify-self: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-fourway img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero-badge {
@@ -318,8 +343,9 @@ ul {
 
 .hero-stats {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2.5rem;
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -504,6 +530,156 @@ ul {
   border-radius: 50px;
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+/* --- Sub-page Header --- */
+.page-header {
+  background: linear-gradient(135deg, var(--royal-blue) 0%, var(--light-blue) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 8rem 0 3.5rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  opacity: 0.85;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 6.5rem 0 2.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+/* --- Past Presidents --- */
+.presidents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.president-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--royal-blue);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.president-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.president-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 auto 0.75rem;
+}
+
+.president-card h4 {
+  font-size: 0.95rem;
+  color: var(--royal-blue);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.president-card .president-year {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.president-card .president-tag {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: rgba(0, 63, 135, 0.08);
+  color: var(--royal-blue);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* --- Members --- */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.member-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--royal-blue);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.member-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.member-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 auto 0.75rem;
+}
+
+.member-card h4 {
+  font-size: 0.95rem;
+  color: var(--royal-blue);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.member-card .member-role {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+.members-note {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 
 /* --- Avenue Chairs --- */
@@ -1142,6 +1318,25 @@ ul {
 @media (max-width: 992px) {
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    justify-items: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 640px;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-fourway {
+    max-width: 360px;
   }
 
   .about-grid,
