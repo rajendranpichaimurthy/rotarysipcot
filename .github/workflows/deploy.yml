@@ -27,7 +27,7 @@ jobs:
           protocol: ${{ secrets.FTP_PROTOCOL || 'ftp' }}
           local-dir: ./
           server-dir: ${{ secrets.FTP_SERVER_DIR || '/public_html/' }}
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.git*/**
