@@ -682,6 +682,94 @@ ul {
   color: var(--text-secondary);
 }
 
+/* --- Presidents & Secretaries (Term Cards) --- */
+.term-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.term-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border-top: 3px solid var(--royal-blue);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.term-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.term-year {
+  background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+  color: var(--white);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.term-people {
+  padding: 0.5rem 1.25rem 1rem;
+}
+
+.term-person {
+  padding: 0.6rem 0;
+}
+
+.term-person + .term-person {
+  border-top: 1px solid var(--light-gray);
+}
+
+.term-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.term-name {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.term-flag {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+  padding: 0.15rem 0.55rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.term-card--current {
+  border-top-color: var(--gold);
+}
+
+.term-card--current .term-year {
+  background: linear-gradient(135deg, var(--gold), #E0920D);
+  color: var(--royal-blue);
+}
+
+.term-flag--current {
+  background: rgba(0, 63, 135, 0.18);
+  color: var(--royal-blue);
+}
+
 /* --- Avenue Chairs --- */
 .chairs-grid {
   display: grid;
