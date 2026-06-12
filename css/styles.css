@@ -785,6 +785,16 @@ ul {
   color: var(--royal-blue);
 }
 
+.term-card--elect {
+  border-top-style: dashed;
+  border-top-color: var(--royal-blue);
+}
+
+.term-flag--elect {
+  background: rgba(0, 63, 135, 0.12);
+  color: var(--royal-blue);
+}
+
 /* --- Avenue Chairs --- */
 .chairs-grid {
   display: grid;
