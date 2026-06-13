@@ -936,6 +936,291 @@ ul {
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
+  margin: 0 0.25rem 0.25rem 0;
+}
+
+/* --- Projects by Year --- */
+.year-block {
+  margin-bottom: 4.5rem;
+}
+
+.year-block:last-child {
+  margin-bottom: 0;
+}
+
+.year-header {
+  border-left: 5px solid var(--gold);
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.year-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--royal-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.year-flag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--gold), #E0920D);
+  color: var(--royal-blue);
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.year-theme {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+.year-leaders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.leader-chip {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 0.7rem 1.25rem;
+  border-top: 3px solid var(--royal-blue);
+  min-width: 190px;
+}
+
+.leader-chip .chip-role {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.leader-chip .chip-name {
+  font-weight: 600;
+  color: var(--royal-blue);
+  margin-top: 0.15rem;
+}
+
+.year-foundation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.fnd-pill {
+  background: rgba(0, 63, 135, 0.06);
+  border-radius: var(--radius);
+  padding: 0.7rem 1.25rem;
+}
+
+.fnd-pill .fnd-amt {
+  font-weight: 700;
+  color: var(--royal-blue);
+  font-size: 1.1rem;
+}
+
+.fnd-pill .fnd-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.year-actions {
+  margin-bottom: 2rem;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--royal-blue);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-download:hover {
+  background: var(--light-blue);
+  transform: translateY(-2px);
+}
+
+.btn-download .dl-icon {
+  font-size: 1.15rem;
+}
+
+.project-card--text .project-body {
+  border-top: 4px solid var(--gold);
+}
+
+.year-subhead {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--royal-blue);
+  margin: 3rem 0 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.fnd-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: -0.75rem 0 1.75rem;
+}
+
+.upcoming-list {
+  columns: 2;
+  column-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 920px;
+}
+
+.upcoming-list li {
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  break-inside: avoid;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .upcoming-list {
+    columns: 1;
+  }
+}
+
+.dream-card {
+  background: linear-gradient(135deg, var(--royal-blue), var(--light-blue));
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  max-width: 920px;
+}
+
+.dream-card h4 {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dream-card p {
+  opacity: 0.92;
+  font-size: 0.95rem;
+}
+
+/* --- Projects Hub (year tiles) --- */
+.year-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.year-tile {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--royal-blue);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+a.year-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.year-tile--current {
+  border-top-color: var(--gold);
+}
+
+.year-tile--soon {
+  opacity: 0.72;
+}
+
+.yt-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--royal-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.yt-leaders {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.yt-leaders div {
+  margin-bottom: 0.3rem;
+}
+
+.yt-leaders strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  display: inline-block;
+  min-width: 74px;
+}
+
+.yt-foot {
+  font-weight: 600;
+  color: var(--royal-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 0.85rem;
+}
+
+.year-tile--soon .yt-foot {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.yt-arrow {
+  font-size: 1.2rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--white);
+  opacity: 0.85;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  opacity: 1;
 }
 
 /* --- Foundation Stats --- */
